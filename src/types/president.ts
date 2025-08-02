@@ -33,6 +33,28 @@ export interface CorruptionCase {
   status: string;
   keyPoliticians?: string[];
   outcome?: string;
+  courtLevel?: string;
+  judges?: string[];
+  convictions?: {
+    name: string;
+    sentence: string;
+    status: string;
+  }[];
+}
+
+export interface CabinetMember {
+  name: string;
+  position: string;
+  startDate: string;
+  endDate?: string;
+  reason?: string; // resignation, dismissal, reshuffle
+}
+
+export interface CabinetChange {
+  date: string;
+  type: 'appointment' | 'dismissal' | 'reshuffle' | 'resignation';
+  description: string;
+  members: string[];
 }
 
 export interface BudgetData {
@@ -41,14 +63,19 @@ export interface BudgetData {
 }
 
 export interface President {
+  id: string;
   name: string;
   title: string;
   term: string;
   termStart: string;
   termEnd: string;
+  imageUrl?: string;
+  biography?: string;
   economicData: EconomicData;
   projects: Project[];
   corruptionCases: CorruptionCase[];
   budgets: BudgetData[];
   kraCollections: BudgetData[];
+  cabinet: CabinetMember[];
+  cabinetChanges: CabinetChange[];
 }

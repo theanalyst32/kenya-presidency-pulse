@@ -2,11 +2,13 @@ import { President } from "@/types/president";
 
 export const presidentsData: President[] = [
   {
+    id: "william-ruto",
     name: "William Ruto",
     title: "5th President of Kenya",
     term: "2022 - Present",
     termStart: "September 2022",
     termEnd: "Present",
+    biography: "William Ruto is the fifth President of Kenya, having taken office in September 2022. Before becoming president, he served as Deputy President from 2013 to 2022 under Uhuru Kenyatta. Known for his 'hustler' narrative and bottom-up economic approach.",
     economicData: {
       gdpAtStart: 4.8,
       gdpAtEnd: 5.2,
@@ -59,7 +61,25 @@ export const presidentsData: President[] = [
         year: "2023",
         status: "Under Investigation",
         keyPoliticians: ["Cabinet Secretary Agriculture"],
-        outcome: "Investigation ongoing by DCI"
+        outcome: "Investigation ongoing by DCI",
+        courtLevel: "Magistrate Court",
+        judges: ["Chief Magistrate Grace Nzioka"],
+        convictions: []
+      }
+    ],
+    cabinet: [
+      { name: "Rigathi Gachagua", position: "Deputy President", startDate: "September 2022" },
+      { name: "Musalia Mudavadi", position: "Prime Cabinet Secretary", startDate: "September 2022" },
+      { name: "Kithure Kindiki", position: "Cabinet Secretary Interior", startDate: "October 2022" },
+      { name: "Njuguna Ndung'u", position: "Cabinet Secretary Treasury", startDate: "October 2022" },
+      { name: "Mithika Linturi", position: "Cabinet Secretary Agriculture", startDate: "October 2022" }
+    ],
+    cabinetChanges: [
+      {
+        date: "October 2022",
+        type: "appointment",
+        description: "Initial cabinet appointments after election victory",
+        members: ["Kithure Kindiki", "Njuguna Ndung'u", "Mithika Linturi"]
       }
     ],
     budgets: [
@@ -72,11 +92,13 @@ export const presidentsData: President[] = [
     ]
   },
   {
+    id: "uhuru-kenyatta",
     name: "Uhuru Kenyatta",
     title: "4th President of Kenya",
     term: "2013 - 2022",
     termStart: "April 2013",
     termEnd: "September 2022",
+    biography: "Uhuru Kenyatta served as the fourth President of Kenya from 2013 to 2022. Son of Kenya's first president Jomo Kenyatta, he focused on infrastructure development through his Big Four Agenda and initiated major projects like the Standard Gauge Railway.",
     economicData: {
       gdpAtStart: 5.7,
       gdpAtEnd: 4.8,
@@ -130,7 +152,13 @@ export const presidentsData: President[] = [
         year: "2015-2018",
         status: "Ongoing",
         keyPoliticians: ["Former NYS Director", "Various Politicians"],
-        outcome: "Several arrests made, cases ongoing in court"
+        outcome: "Several arrests made, cases ongoing in court",
+        courtLevel: "High Court",
+        judges: ["Justice Hedwig Ong'udi", "Justice James Wakiaga"],
+        convictions: [
+          { name: "Josephine Kabura", sentence: "10 years imprisonment", status: "convicted" },
+          { name: "Geoffrey Wamae", sentence: "8 years imprisonment", status: "convicted" }
+        ]
       },
       {
         caseName: "KEMSA Scandal",
@@ -139,7 +167,10 @@ export const presidentsData: President[] = [
         year: "2020",
         status: "Under Investigation",
         keyPoliticians: ["KEMSA Officials", "Health Ministry Officials"],
-        outcome: "Parliamentary investigation concluded, prosecutions pending"
+        outcome: "Parliamentary investigation concluded, prosecutions pending",
+        courtLevel: "High Court",
+        judges: ["Justice Anthony Mrima"],
+        convictions: []
       },
       {
         caseName: "Eurobond Scandal",
@@ -148,7 +179,31 @@ export const presidentsData: President[] = [
         year: "2014-2019",
         status: "Under Investigation",
         keyPoliticians: ["Treasury Officials"],
-        outcome: "Forensic audit ongoing"
+        outcome: "Forensic audit ongoing",
+        courtLevel: "High Court",
+        judges: ["Justice George Oduya"],
+        convictions: []
+      }
+    ],
+    cabinet: [
+      { name: "William Ruto", position: "Deputy President", startDate: "April 2013", endDate: "September 2022" },
+      { name: "Henry Rotich", position: "Cabinet Secretary Treasury", startDate: "April 2013", endDate: "July 2019", reason: "dismissal" },
+      { name: "Ukur Yatani", position: "Cabinet Secretary Treasury", startDate: "July 2019", endDate: "September 2022" },
+      { name: "Fred Matiang'i", position: "Cabinet Secretary Interior", startDate: "January 2018", endDate: "September 2022" },
+      { name: "Rachel Omamo", position: "Cabinet Secretary Foreign Affairs", startDate: "February 2013", endDate: "September 2022" }
+    ],
+    cabinetChanges: [
+      {
+        date: "July 2019",
+        type: "dismissal",
+        description: "Treasury CS Henry Rotich dismissed over Arror and Kimwarer dams scandal",
+        members: ["Henry Rotich"]
+      },
+      {
+        date: "January 2018",
+        type: "reshuffle",
+        description: "Major cabinet reshuffle with Fred Matiang'i moved to Interior",
+        members: ["Fred Matiang'i"]
       }
     ],
     budgets: [
@@ -176,11 +231,13 @@ export const presidentsData: President[] = [
     ]
   },
   {
+    id: "mwai-kibaki",
     name: "Mwai Kibaki",
     title: "3rd President of Kenya",
     term: "2003 - 2013",
     termStart: "December 2002",
     termEnd: "April 2013",
+    biography: "Mwai Kibaki served as Kenya's third President from 2002 to 2013. An economist by training, he is credited with reviving Kenya's economy and implementing free primary education. His presidency marked the end of KANU's long rule in Kenya.",
     economicData: {
       gdpAtStart: 0.5,
       gdpAtEnd: 5.7,
@@ -248,7 +305,12 @@ export const presidentsData: President[] = [
         year: "2003-2007",
         status: "Ongoing",
         keyPoliticians: ["Treasury Officials", "Various Ministers"],
-        outcome: "Several prosecutions, some cases still in court"
+        outcome: "Several prosecutions, some cases still in court",
+        courtLevel: "High Court",
+        judges: ["Justice George Oduya", "Justice Mumbi Ngugi"],
+        convictions: [
+          { name: "Deepak Kamani", sentence: "Fine and asset forfeiture", status: "convicted" }
+        ]
       },
       {
         caseName: "Maize Scandal",
@@ -257,7 +319,34 @@ export const presidentsData: President[] = [
         year: "2009",
         status: "Convicted",
         keyPoliticians: ["NCPB Officials"],
-        outcome: "Several officials convicted and jailed"
+        outcome: "Several officials convicted and jailed",
+        courtLevel: "Magistrate Court",
+        judges: ["Senior Principal Magistrate Francis Andayi"],
+        convictions: [
+          { name: "Joel Sang", sentence: "5 years imprisonment", status: "convicted" },
+          { name: "Grace Wanjiku", sentence: "3 years imprisonment", status: "convicted" }
+        ]
+      }
+    ],
+    cabinet: [
+      { name: "Moody Awori", position: "Vice President", startDate: "January 2003", endDate: "January 2008" },
+      { name: "Kalonzo Musyoka", position: "Vice President", startDate: "January 2008", endDate: "April 2013" },
+      { name: "David Mwiraria", position: "Cabinet Secretary Treasury", startDate: "January 2003", endDate: "February 2006", reason: "resignation" },
+      { name: "Amos Kimunya", position: "Cabinet Secretary Treasury", startDate: "February 2006", endDate: "July 2008" },
+      { name: "John Michuki", position: "Cabinet Secretary Interior", startDate: "January 2003", endDate: "April 2013" }
+    ],
+    cabinetChanges: [
+      {
+        date: "February 2006",
+        type: "resignation",
+        description: "Treasury CS David Mwiraria resigned over Anglo Leasing scandal",
+        members: ["David Mwiraria"]
+      },
+      {
+        date: "January 2008",
+        type: "appointment",
+        description: "Kalonzo Musyoka appointed as Vice President in coalition government",
+        members: ["Kalonzo Musyoka"]
       }
     ],
     budgets: [
@@ -286,11 +375,13 @@ export const presidentsData: President[] = [
     ]
   },
   {
+    id: "daniel-arap-moi",
     name: "Daniel Arap Moi",
     title: "2nd President of Kenya",
     term: "1978 - 2002",
     termStart: "August 1978",
     termEnd: "December 2002",
+    biography: "Daniel arap Moi was Kenya's second President, serving from 1978 to 2002. His 24-year rule was marked by both development projects and authoritarian governance. He introduced the philosophy of 'Nyayo' (footsteps) and oversaw Kenya's transition to multi-party democracy in the 1990s.",
     economicData: {
       gdpAtStart: 8.2,
       gdpAtEnd: 0.5,
@@ -344,7 +435,12 @@ export const presidentsData: President[] = [
         year: "1990-1993",
         status: "Convicted",
         keyPoliticians: ["Kamlesh Pattni", "Various Government Officials"],
-        outcome: "Main perpetrator convicted, government officials sanctioned"
+        outcome: "Main perpetrator convicted, government officials sanctioned",
+        courtLevel: "High Court",
+        judges: ["Justice Akilano Akiwumi", "Justice Samuel Bosire"],
+        convictions: [
+          { name: "Kamlesh Pattni", sentence: "Asset forfeiture and fine", status: "convicted" }
+        ]
       },
       {
         caseName: "Central Bank Forex Scandal",
@@ -353,7 +449,31 @@ export const presidentsData: President[] = [
         year: "1995",
         status: "Acquitted",
         keyPoliticians: ["Central Bank Officials"],
-        outcome: "Most officials acquitted due to lack of evidence"
+        outcome: "Most officials acquitted due to lack of evidence",
+        courtLevel: "High Court",
+        judges: ["Justice Majid Cockar"],
+        convictions: []
+      }
+    ],
+    cabinet: [
+      { name: "George Saitoti", position: "Vice President", startDate: "May 1989", endDate: "August 1997" },
+      { name: "Simeon Nyachae", position: "Vice President", startDate: "January 1999", endDate: "August 2002" },
+      { name: "Musalia Mudavadi", position: "Vice President", startDate: "August 2002", endDate: "December 2002" },
+      { name: "Francis Lotodo", position: "Minister of Finance", startDate: "1988", endDate: "1993" },
+      { name: "Micah Cheserem", position: "Governor Central Bank", startDate: "1993", endDate: "2001" }
+    ],
+    cabinetChanges: [
+      {
+        date: "August 1997",
+        type: "dismissal",
+        description: "VP George Saitoti dismissed amid political tensions",
+        members: ["George Saitoti"]
+      },
+      {
+        date: "August 2002",
+        type: "appointment",
+        description: "Last-minute appointment of Musalia Mudavadi as VP before elections",
+        members: ["Musalia Mudavadi"]
       }
     ],
     budgets: [
